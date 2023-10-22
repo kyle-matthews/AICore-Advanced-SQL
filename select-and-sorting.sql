@@ -34,3 +34,4 @@ SELECT
     description,
     rental_rate * rental_duration AS rental_cost
 FROM film;
+
