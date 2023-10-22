@@ -23,5 +23,6 @@ SELECT
     release_year,
     description,
     rental_rate,
-    rental_duration
-    FROM film;
+    rental_duration,
+    rental_rate / rental_duration AS rental_proportion_as_proportion
+FROM film;
