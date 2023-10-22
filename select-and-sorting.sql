@@ -18,11 +18,19 @@ FROM payment
 WHERE amount =  (SELECT MAX(amount) FROM payment); */
 
 -- 6.Return all film titles, year of release, description and rental rate as a proportion of the rental duration
-SELECT 
+/* SELECT 
     title,
     release_year,
     description,
     rental_rate,
     rental_duration,
     rental_rate / rental_duration AS rental_proportion_as_proportion
+FROM film; */
+
+--7. Return all film titles, release year, description and total rental cost(the rental rate times duration) as a proportion of replacement cost
+SELECT
+    title,
+    release_year,
+    description,
+    rental_rate * rental_duration AS rental_cost
 FROM film;
