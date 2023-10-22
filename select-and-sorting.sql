@@ -13,6 +13,15 @@ LIMIT 30; */
 LIMIT 30; */
 
 -- 5. Return all information about the highest payments made
-SELECT *
+/*SELECT *
 FROM payment
-WHERE amount =  (SELECT MAX(amount) FROM payment);
+WHERE amount =  (SELECT MAX(amount) FROM payment); */
+
+-- 6.Return all film titles, year of release, description and rental rate as a proportion of the rental duration
+SELECT 
+    title,
+    release_year,
+    description,
+    rental_rate,
+    rental_duration
+    FROM film;
