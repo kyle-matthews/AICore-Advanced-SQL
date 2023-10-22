@@ -9,5 +9,10 @@
 LIMIT 30; */
 
 --4. Return the first name, last name and email addresses of 30 customers
-SELECT first_name, last_name, email FROM customer
-LIMIT 30;
+/* SELECT first_name, last_name, email FROM customer
+LIMIT 30; */
+
+-- 5. Return all information about the highest payments made
+SELECT *
+FROM payment
+WHERE amount =  (SELECT MAX(amount) FROM payment);
