@@ -5,5 +5,9 @@
 --SELECT title, release_year, length FROM film;
 
 -- 3. Return all info of 30 customers. 
-SELECT * FROM customer
+/*SELECT * FROM customer
+LIMIT 30; */
+
+--4. Return the first name, last name and email addresses of 30 customers
+SELECT first_name, last_name, email FROM customer
 LIMIT 30;
