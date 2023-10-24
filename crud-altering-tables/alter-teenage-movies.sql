@@ -6,7 +6,7 @@ Create a foreign key constraint which links the film_id columns in the teenage_m
 Film ratings have been updated, set all columns with a rating of NC-17 to PG-13 */
 
 ALTER TABLE teenage_movies
-ALTER COLUMN rating TYPE INTEGER;
+ALTER COLUMN rating TYPE TEXT;
 
 ALTER TABLE teenage_movies
 DROP COLUMN release_year;
@@ -19,5 +19,5 @@ ADD CONSTRAINT fk_film
 FOREIGN KEY (film_id) REFERENCES film(film_id);
 
 UPDATE teenage_movies
-    SET rating = "PG-13"
-    WHERE rating = "NC-17";
+    SET rating = 'PG-13'
+    WHERE rating = 'NC-17';
