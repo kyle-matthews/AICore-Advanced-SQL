@@ -6,17 +6,30 @@
 between 26/05/2005 and 29/05/2005. Limit the results to 25 customers and sort the results by the
 last names in ascending order */
 
--- 1.
+-- Selects all address from the address table.
 SELECT address FROM address;
 
--- 2
+-- 2 Gives staff name and address information, joining on the address_id id.
 SELECT
     first_name,
     last_name,
-    address.address_id,
     address.district,
     address.postal_code
 FROM 
     staff
 INNER JOIN 
     address ON staff.address_id = address.address_id;
+
+-- 3. Retrieves customer name, district and city. Joining on address_id and city_id.
+SELECT
+    first_name,
+    last_name,
+
+    address.district,
+    city.city
+FROM
+    customer
+INNER JOIN
+    address ON address.address_id = customer.address_id
+INNER JOIN
+    city ON city.city_id = address.city_id
